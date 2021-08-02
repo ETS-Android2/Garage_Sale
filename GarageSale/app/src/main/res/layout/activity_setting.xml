@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".krina.SettingActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_manage_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage profile"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="26dp"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_manage_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage product"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="26dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="26dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

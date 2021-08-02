@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
+            android:name=".krina.SettingActivity"
+            android:exported="true" />
+        <activity
             android:name=".krina.ProfileActivity"
             android:exported="true" />
         <activity
