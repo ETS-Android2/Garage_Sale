@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".krina.ProfileActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="32dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_logo_nam"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Set Profile"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:gravity="center"
+        android:enabled="false"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="64dp"/>
+
+    <EditText
+        android:id="@+id/et_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone number"
+        android:gravity="center"
+        android:inputType="phone"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
