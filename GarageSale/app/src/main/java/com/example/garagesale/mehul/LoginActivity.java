@@ -106,8 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                                     mDialog.cancel();
 
                                     if (email.equals("admin@admin.com")){
-                                        Toast.makeText(LoginActivity.this, "remove comment & make admin activity here", Toast.LENGTH_SHORT).show();
-                                        //startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+                                        startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                                     } else {
                                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                                     }
@@ -121,6 +120,12 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this,HomeActivity.class));
+        finish();
     }
 
 }

@@ -20,6 +20,8 @@ public class SplashActivity extends AppCompatActivity {
         navigation();
     }
     private void navigation() {
+
+        //Handler will handle small background tasks
         new Handler(getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,8 +29,7 @@ public class SplashActivity extends AppCompatActivity {
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 }
                 else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("VIQBHRuVWCbrrO4ur0K43M5TyA22")){
-                    Toast.makeText(SplashActivity.this, "Remove comment and add admin activity here", Toast.LENGTH_SHORT).show();
-                    //startActivity(new Intent(SplashActivity.this, AdminActivity.class));
+                    startActivity(new Intent(SplashActivity.this, AdminActivity.class));
                 } else {
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 }
