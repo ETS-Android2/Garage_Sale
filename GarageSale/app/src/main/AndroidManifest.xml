@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
+            android:name=".krutarth.AdminProductsActivity"
+            android:exported="true" />
+        <activity
             android:name=".krutarth.AdminActivity"
             android:exported="true" />
         <activity
