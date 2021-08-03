@@ -1,4 +1,4 @@
-package com.example.garagesale.mehul.models;
+package com.example.garagesale.models;
 
 public class UserDetail {
     private String firstName;

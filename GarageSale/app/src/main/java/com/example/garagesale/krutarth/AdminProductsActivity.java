@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.example.garagesale.R;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.garagesale.models.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
