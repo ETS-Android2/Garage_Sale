@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
+            android:name=".falak.ManageProductActivity"
+            android:exported="true" />
+        <activity
             android:name=".falak.AddProductActivity"
             android:exported="true" />
         <activity
@@ -47,8 +50,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCv40FrxYTVsFOpOmwf19hfLZa68F-gpOs" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
