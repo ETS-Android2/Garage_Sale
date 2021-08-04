@@ -2,9 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="@color/yellow_500">
 
-    <TextView
+    <ImageView
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_gravity="center"
+        android:src="@drawable/GsaleLogo"
+        android:scaleType="fitXY"/>
+    <!--<TextView
         android:id="@+id/tv_logo_nam"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -12,7 +19,7 @@
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"/>-->
 
     <ProgressBar
         android:id="@+id/prbar"
@@ -20,6 +27,7 @@
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:layout_marginTop="100dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        />
 
 </FrameLayout>
