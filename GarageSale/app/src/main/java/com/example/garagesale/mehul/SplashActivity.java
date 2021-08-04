@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
                 if (FirebaseAuth.getInstance().getCurrentUser() == null){
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 }
-                else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("VIQBHRuVWCbrrO4ur0K43M5TyA22")){
+                else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("9bbUMlK7k3OQxP1OVfv83Nj5plR2")){
                     startActivity(new Intent(SplashActivity.this, AdminActivity.class));
                 } else {
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));
