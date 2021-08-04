@@ -96,7 +96,7 @@ public class AddProductActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull @NotNull Exception e) {
                         mDialog.cancel();
-                        Toast.makeText(AddProductActivity.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddProductActivity.this, "Product adding operation failed.. please try again", Toast.LENGTH_SHORT).show();
                     }
                 });
 

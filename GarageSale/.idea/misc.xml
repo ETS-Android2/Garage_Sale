@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/Admin/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/Users/Admin/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_setting.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/drawable/ic_gps.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/drawable/ic_settings.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_add_product.xml" value="0.1621376811594203" />
-        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_admin.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_all_product.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_home.xml" value="0.18" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_login.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_manage_product.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/activity_profile.xml" value="0.1621376811594203" />
@@ -16,6 +19,7 @@
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/fragment_home.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/item_manage_products.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/item_product.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/layout/item_products.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/menu/admin_bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Falko/Documents/GitHub/Garage_Sale/GarageSale/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.14387031408308004" />

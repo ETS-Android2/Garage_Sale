@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     mDialog.cancel();
 
-                                    if (email.equals("admin@admin.com")){
+                                    if (email.equals("falak.desai@yahoo.com")){
                                         startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                                     } else {
                                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
