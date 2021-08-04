@@ -12,7 +12,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.garagesale.mehul.HomeActivity;
+import com.example.garagesale.harsh.HomeActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;

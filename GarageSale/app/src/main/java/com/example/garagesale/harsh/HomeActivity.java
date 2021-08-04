@@ -1,4 +1,4 @@
-package com.example.garagesale.mehul;
+package com.example.garagesale.harsh;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.garagesale.R;
+import com.example.garagesale.mehul.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 

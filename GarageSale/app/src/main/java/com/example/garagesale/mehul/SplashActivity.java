@@ -6,10 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.garagesale.R;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 
+import com.example.garagesale.harsh.HomeActivity;
 import com.example.garagesale.krutarth.AdminActivity;
 import com.google.firebase.auth.FirebaseAuth;
 public class SplashActivity extends AppCompatActivity {
