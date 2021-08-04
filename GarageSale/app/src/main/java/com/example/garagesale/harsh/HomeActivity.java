@@ -12,6 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.garagesale.R;
+import com.example.garagesale.falak.AddProductActivity;
+import com.example.garagesale.krina.SettingActivity;
+import com.example.garagesale.mehul.LoginActivity;
+import com.example.garagesale.models.Product;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -53,11 +58,6 @@ import java.util.Map;
 
 import javax.annotation.Nonnull;
 
-import yellow.sparkle.garagesale.falak.AddProductActivity;
-import yellow.sparkle.garagesale.R;
-import yellow.sparkle.garagesale.krina.SettingActivity;
-import yellow.sparkle.garagesale.mehul.LoginActivity;
-import yellow.sparkle.garagesale.models.Product;
 
 import static androidx.activity.result.contract.ActivityResultContracts.*;
 
