@@ -9,7 +9,7 @@
         android:layout_width="640dp"
         android:layout_height="480dp"
         android:layout_gravity="center"
-        android:src="@drawable/GsaleLogo"
+        android:src="@drawable/gsalelogo"
         android:scaleType="fitXY"/>
     <!--<TextView
         android:id="@+id/tv_logo_nam"
