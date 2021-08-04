@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mehul.LoginActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="32dp">
+
+    <TextView
+        android:id="@+id/tv_logo_nam"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Add Product"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_p_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product name"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="64dp"/>
+
+    <EditText
+        android:id="@+id/et_p_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product price"
+        android:gravity="center"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/et_p_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:gravity="center"
+        android:inputType="textEmailAddress"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:text="Note : Your current location will be set as your garage sale location on map"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
