@@ -1,4 +1,4 @@
-package com.example.garagesale.falak;
+package com.example.garagesale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,11 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.garagesale.R;
 import com.example.garagesale.models.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -21,17 +19,16 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class ManageProductActivity extends AppCompatActivity {
+public class AllProductActivity extends AppCompatActivity {
 
     private RecyclerView mProductRecycler;
-    private ManageProductAdapter mManageProductAdapter;
+    private AllProductAdapter mAllProductAdapter;
     private final List<Product> mProductList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_product);
+        setContentView(R.layout.activity_all_product);
 
         mProductRecycler = findViewById(R.id.rcv_product);
 
@@ -43,19 +40,13 @@ public class ManageProductActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
-
-                                Product product = document.toObject(Product.class);
-
-                                if (product.getProductOwnerUid().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
-                                    mProductList.add(product);
-                                }
-
+                                mProductList.add(document.toObject(Product.class));
                             }
-                            mManageProductAdapter = new ManageProductAdapter(mProductList);
-                            mProductRecycler.setAdapter(mManageProductAdapter);
+                            mAllProductAdapter = new AllProductAdapter(mProductList);
+                            mProductRecycler.setAdapter(mAllProductAdapter);
 
                         } else {
-                            Toast.makeText(ManageProductActivity.this, "Error getting products", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AllProductActivity.this, "Error getting products", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

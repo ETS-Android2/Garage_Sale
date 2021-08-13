@@ -1,10 +1,9 @@
-package com.example.garagesale.krina;
+package com.example.garagesale;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.garagesale.R;
 import androidx.annotation.NonNull;
 
 import android.app.ProgressDialog;
