@@ -1,4 +1,4 @@
-package com.example.garagesale.harsh;
+package com.example.garagesale;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,10 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.garagesale.R;
-import com.example.garagesale.falak.AddProductActivity;
-import com.example.garagesale.krina.SettingActivity;
-import com.example.garagesale.mehul.LoginActivity;
 import com.example.garagesale.models.Product;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;

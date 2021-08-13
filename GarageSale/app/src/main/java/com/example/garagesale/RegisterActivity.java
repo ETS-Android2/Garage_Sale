@@ -1,4 +1,4 @@
-package com.example.garagesale.mehul;
+package com.example.garagesale;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.garagesale.harsh.HomeActivity;
 import com.example.garagesale.models.UserDetail;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,8 +22,6 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import com.example.garagesale.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

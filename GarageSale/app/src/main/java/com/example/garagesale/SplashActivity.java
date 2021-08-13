@@ -1,15 +1,12 @@
-package com.example.garagesale.mehul;
+package com.example.garagesale;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.garagesale.R;
 import android.content.Intent;
 import android.os.Handler;
 
-import com.example.garagesale.harsh.HomeActivity;
-import com.example.garagesale.krutarth.AdminActivity;
 import com.google.firebase.auth.FirebaseAuth;
 public class SplashActivity extends AppCompatActivity {
 

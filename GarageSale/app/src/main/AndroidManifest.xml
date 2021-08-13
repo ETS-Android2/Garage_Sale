@@ -13,34 +13,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
-            android:name=".harsh.AllProductActivity"
+            android:name=".AllProductActivity"
             android:exported="true" />
         <activity
-            android:name=".falak.ManageProductActivity"
+            android:name=".ManageProductActivity"
             android:exported="true" />
         <activity
-            android:name=".falak.AddProductActivity"
+            android:name=".AddProductActivity"
             android:exported="true" />
         <activity
-            android:name=".krutarth.AdminProductsActivity"
+            android:name=".AdminProductsActivity"
             android:exported="true" />
         <activity
-            android:name=".krutarth.AdminActivity"
+            android:name=".AdminActivity"
             android:exported="true" />
         <activity
-            android:name=".krina.SettingActivity"
+            android:name=".SettingActivity"
             android:exported="true" />
         <activity
-            android:name=".krina.ProfileActivity"
+            android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".harsh.HomeActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name" />
-        <activity android:name=".mehul.RegisterActivity" />
-        <activity android:name=".mehul.ForgetPasswordActivity" />
-        <activity android:name=".mehul.LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ForgetPasswordActivity" />
+        <activity android:name=".LoginActivity" />
         <activity
-            android:name=".mehul.SplashActivity"
+            android:name=".SplashActivity"
             android:theme="@style/Theme.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

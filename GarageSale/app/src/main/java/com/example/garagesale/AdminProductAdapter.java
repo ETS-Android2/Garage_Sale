@@ -1,4 +1,4 @@
-package com.example.garagesale.krutarth;
+package com.example.garagesale;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.garagesale.R;
 import com.example.garagesale.models.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
