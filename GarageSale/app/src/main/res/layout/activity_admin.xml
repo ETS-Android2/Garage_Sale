@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Admin"
                 android:textStyle="bold"
-                android:textColor="@color/yellow_700"
+                android:textColor="@color/primaryLightColor"
                 android:textSize="36sp"/>
 
         </LinearLayout>
@@ -47,33 +47,36 @@
             android:textSize="30sp"/>
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Products : 0"
             android:gravity="center"
             android:layout_marginTop="50dp"
             android:layout_marginStart="4dp"
-            android:textColor="@color/yellow_700"
+            android:textColor="@color/primaryLightColor"
             android:textSize="24sp"/>
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_customers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Customers : 0"
             android:gravity="center"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            android:textColor="@color/yellow_700"
+            android:textColor="@color/primaryLightColor"
             android:textSize="24sp"/>
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_transactions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Transactions : 0"
             android:gravity="center"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            android:textColor="@color/yellow_700"
+            android:textColor="@color/primaryLightColor"
             android:textSize="24sp"/>
 
     </LinearLayout>
@@ -86,7 +89,7 @@
         android:layout_marginEnd="0dp"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
-        app:itemBackground="@color/yellow_500"
+        app:itemBackground="@color/primaryLightColor"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/admin_bottom_nav_menu" />
 

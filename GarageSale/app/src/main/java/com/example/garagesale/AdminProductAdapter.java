@@ -41,6 +41,7 @@ public class AdminProductAdapter extends RecyclerView.Adapter<AdminProductAdapte
     public void onBindViewHolder(@NonNull MyAdminProductViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Product product = productList.get(position);
         holder.mTvProductName.setText(product.getProductName());
+        Glide.with(holder.itemView).load(product.getProductImage()).into(holder.mImageView);
 
         mDialog = new ProgressDialog(holder.itemView.getContext());
         mDialog.setMessage("Deleting item");
@@ -72,11 +73,10 @@ public class AdminProductAdapter extends RecyclerView.Adapter<AdminProductAdapte
         return productList.size();
     }
 
-    protected static class MyAdminProductViewHolder extends RecyclerView.ViewHolder {
-
-        MaterialTextView mTvProductName;
-        ImageView mImageView;
-        MaterialButton mBtnDelete;
+    public static class MyAdminProductViewHolder extends RecyclerView.ViewHolder {
+        private final MaterialTextView mTvProductName;
+        private final ImageView mImageView;
+        private final MaterialButton mBtnDelete;
 
         public MyAdminProductViewHolder(@NonNull View itemView) {
             super(itemView);
