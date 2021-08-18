@@ -13,7 +13,7 @@
         android:id="@+id/tv_logo_nam"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Add Product"
+        android:text="Edit Product"
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -62,19 +62,11 @@
         android:gravity="center"
         android:inputType="textEmailAddress"/>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textColor="@android:color/holo_red_dark"
-        android:gravity="center"
-        android:text="Note : Your current location will be set as your garage sale location on map"/>
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_update"
         android:layout_width="150dp"
         android:layout_height="55dp"
-        android:text="Submit"
+        android:text="Update"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textAllCaps="false"

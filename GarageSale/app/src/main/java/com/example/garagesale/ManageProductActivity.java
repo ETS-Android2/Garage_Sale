@@ -50,7 +50,7 @@ public class ManageProductActivity extends AppCompatActivity {
                                 }
 
                             }
-                            mManageProductAdapter = new ManageProductAdapter(mProductList);
+                            mManageProductAdapter = new ManageProductAdapter(mProductList, ManageProductActivity.this);
                             mProductRecycler.setAdapter(mManageProductAdapter);
 
                         } else {

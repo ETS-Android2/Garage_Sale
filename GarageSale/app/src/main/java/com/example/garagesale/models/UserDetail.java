@@ -7,14 +7,18 @@ public class UserDetail {
     private String userUid;
     private String phoneNumber;
     private String address;
+    private String userImage;
 
     public UserDetail() {}
 
-    public UserDetail(String firstName, String lastName, String email, String userUid) {
+    public UserDetail(String firstName, String lastName, String email, String userUid, String phoneNumber, String address, String userImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.userUid = userUid;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.userImage = userImage;
     }
 
     public String getFirstName() {
@@ -63,5 +67,13 @@ public class UserDetail {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 }

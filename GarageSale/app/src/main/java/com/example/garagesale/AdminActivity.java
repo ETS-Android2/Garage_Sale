@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 
 import com.example.garagesale.models.Product;
 import com.example.garagesale.models.UserDetail;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textview.MaterialTextView;
