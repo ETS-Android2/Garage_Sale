@@ -1,59 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:layout_marginHorizontal="32dp">
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_logo_nam"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Set Profile"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
-
-    <EditText
-        android:id="@+id/et_email"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="32dp"
         android:gravity="center"
-        android:enabled="false"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="64dp"/>
+        android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/et_phone_no"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone number"
-        android:gravity="center"
-        android:inputType="phone"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/tv_logo_nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Set Profile"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Address"
-        android:gravity="center"
-        android:inputType="text"
-        android:layout_marginTop="16dp"/>
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_profile" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_submit"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:text="Submit"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        app:cornerRadius="32dp"
-        android:layout_marginTop="16dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_choose_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/edit_profile"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Phone number"
+            android:maxLength="10"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Address"
+            android:inputType="text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/primaryColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="32dp" />
+    </LinearLayout>
+</ScrollView>
