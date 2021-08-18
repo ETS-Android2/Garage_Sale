@@ -121,7 +121,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
 
                                     String userUid = task.getResult().getUser().getUid();
-                                    final UserDetail userDetail = new UserDetail(firstName, lastName, email, userUid);
+                                    final UserDetail userDetail = new UserDetail(firstName, lastName, email, userUid, "", "","");
 
                                     FirebaseFirestore.getInstance().collection("Users").document(userUid).set(userDetail).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override

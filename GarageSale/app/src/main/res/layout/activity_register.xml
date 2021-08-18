@@ -72,11 +72,13 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sign_up"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:layout_marginTop="16dp"
             android:text="Sign up"
             android:textAllCaps="false"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textColor="@color/primaryColor"
+            android:backgroundTint="@color/black"
             android:textStyle="bold"
             app:cornerRadius="32dp" />
 
