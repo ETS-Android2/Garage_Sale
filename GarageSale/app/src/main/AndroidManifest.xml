@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
+            android:name=".ProductDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".EditProductActivity"
             android:exported="true" />
         <activity
@@ -62,10 +65,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCv40FrxYTVsFOpOmwf19hfLZa68F-gpOs" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
