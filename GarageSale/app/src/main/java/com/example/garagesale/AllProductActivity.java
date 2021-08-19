@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.garagesale.models.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -90,7 +95,6 @@ public class AllProductActivity extends AppCompatActivity {
                                 }
                             }
                             mAllProductAdapter = new AllProductAdapter(mProductList, AllProductActivity.this);
-                            mAllProductAdapter = new AllProductAdapter(mProductList);
                             mProductRecycler.setAdapter(mAllProductAdapter);
 
                         } else {
