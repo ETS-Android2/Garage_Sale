@@ -57,13 +57,14 @@ import javax.annotation.Nonnull;
 
 import static androidx.activity.result.contract.ActivityResultContracts.*;
 
-public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnCameraMoveStartedListener {
 
     private FloatingActionButton mFabLocation;
 
     private GoogleMap mGoogleMap;
     private LocationRequest locationRequest;
     private FusedLocationProviderClient fusedLocationClient;
+    private final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
     private final List<Product> mProductList = new ArrayList<>();
 
@@ -148,6 +149,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                             intent.putExtra("lat", currentLat);
                             intent.putExtra("lng", currentLng);
                             startActivity(intent);
+                            finish();
                         } else if (currentLat == 0.0 && currentLng == 0.0) {
                             Toast.makeText(HomeActivity.this, "Unable find your current location", Toast.LENGTH_SHORT).show();
                             requestPermissionLauncher.launch(permissionsForLocation);
@@ -179,9 +181,23 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(@NonNull GoogleMap googleMap) {
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         mGoogleMap = googleMap;
-
+        googleMap.setOnMarkerClickListener(this);
+        googleMap.setOnCameraMoveStartedListener(this);
         //Harsh: For getting products
         getAllProduct();
+    }
+
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+        for (int i = 0; i <= mProductList.size(); i++){
+            if (mProductList.get(i).getProductKey().equals(marker.getTag())){
+                Intent intent = new Intent(this, ProductDetailActivity.class);
+                intent.putExtra("Product", mProductList.get(i));
+                startActivity(intent);
+                break;
+            }
+        }
+        return true;
     }
 
     //Harsh:
@@ -270,8 +286,9 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(new Intent(HomeActivity.this, SettingActivity.class));
         else {
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+            finish();
         }
-        finish();
+
     }
 
     //Harsh: permission of different versions
@@ -300,5 +317,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onPause() {
         super.onPause();
         fusedLocationClient.removeLocationUpdates(locationCallback);
+    }
+    @Override
+    public void onCameraMoveStarted(int i) {
+        if (i == REASON_GESTURE){
+            fusedLocationClient.removeLocationUpdates(locationCallback);
+        }
     }
 }

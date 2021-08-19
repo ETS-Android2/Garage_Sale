@@ -22,8 +22,13 @@ import java.util.List;
 public class AllProductActivity extends AppCompatActivity {
 
     private RecyclerView mProductRecycler;
+    private EditText mEtSearch;
+    private MaterialButton mBtnSearch;
+    private MaterialButton mBtnReset;
     private AllProductAdapter mAllProductAdapter;
     private final List<Product> mProductList = new ArrayList<>();
+    private final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,43 @@ public class AllProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_all_product);
 
         mProductRecycler = findViewById(R.id.rcv_product);
+        mEtSearch = findViewById(R.id.et_search);
+        mBtnSearch = findViewById(R.id.btn_search);
+        mBtnReset = findViewById(R.id.btn_reset);
+        getAllProducts();
+        searchButton();
+        resetButton();
+    }
+    private void searchButton() {
+        mBtnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchedText = mEtSearch.getText().toString().trim();
+                if (searchedText.isEmpty()){
+                    Toast.makeText(AllProductActivity.this, "Please enter search text", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                final List<Product> mSearchedProductList = new ArrayList<>();
+                for (int i = 0; i < mProductList.size(); i++){
+                    if (searchedText.equals(mProductList.get(i).getProductName())){
+                        mSearchedProductList.add(mProductList.get(i));
+                    }
+                }
+                mAllProductAdapter.addNewList(mSearchedProductList);
+            }
+        });
+    }
+    private void resetButton() {
+        mBtnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEtSearch.setText("");
+                getAllProducts();
+            }
+        });
+    }
+    private void getAllProducts() {
+        mProductList.clear();
 
         FirebaseFirestore.getInstance().collection("Products").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -40,8 +82,14 @@ public class AllProductActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                mProductList.add(document.toObject(Product.class));
+                                Product products = document.toObject(Product.class);
+                                if (currentUser == null) {
+                                    makeList(products);
+                                } else if (!currentUser.getUid().equals(products.getProductOwnerUid())){
+                                    makeList(products);
+                                }
                             }
+                            mAllProductAdapter = new AllProductAdapter(mProductList, AllProductActivity.this);
                             mAllProductAdapter = new AllProductAdapter(mProductList);
                             mProductRecycler.setAdapter(mAllProductAdapter);
 
@@ -50,5 +98,10 @@ public class AllProductActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+    private void makeList(Product product){
+        if (product.getProductDisplay()){
+            mProductList.add(product);
+        }
     }
 }
