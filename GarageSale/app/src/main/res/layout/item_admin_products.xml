@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:background="@color/yellow_500">
+        android:background="@color/primaryColor">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="100dp"
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_upload"
                 android:scaleType="fitXY"
-                android:background="@color/yellow_500"
+                android:background="@color/primaryColor"
                 android:contentDescription="No image" />
 
         </com.google.android.material.card.MaterialCardView>
