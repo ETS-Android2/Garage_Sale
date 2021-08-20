@@ -10,6 +10,8 @@ import android.os.Handler;
 import com.google.firebase.auth.FirebaseAuth;
 public class SplashActivity extends AppCompatActivity {
 
+    public String adminStaticUID = "eDKv7K3O16XxfU25WEAr4FOGbwR2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
                 if (FirebaseAuth.getInstance().getCurrentUser() == null){
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 }
-                else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("9bbUMlK7k3OQxP1OVfv83Nj5plR2")){
+                else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals(adminStaticUID)){
                     startActivity(new Intent(SplashActivity.this, AdminActivity.class));
                 } else {
                     startActivity(new Intent(SplashActivity.this, HomeActivity.class));

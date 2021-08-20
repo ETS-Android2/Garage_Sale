@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView mForgetPassword;
 
     private ProgressDialog mDialog;
+    public String adminStaticEmail = "falak.desai@yahoo.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     mDialog.cancel();
 
-                                    if (email.equals("falak.desai@yahoo.com")){
+                                    if (email.equals(adminStaticEmail)){
                                         startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                                     } else {
                                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
