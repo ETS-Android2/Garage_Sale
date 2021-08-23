@@ -10,7 +10,7 @@ import android.os.Handler;
 import com.google.firebase.auth.FirebaseAuth;
 public class SplashActivity extends AppCompatActivity {
 
-    public String adminStaticUID = "eDKv7K3O16XxfU25WEAr4FOGbwR2";
+    public String adminStaticUID = "jtd43rOGgVTBEeMX4AHQPIcngaS2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,6 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 finish();
             }
-        }, 3000);
+        }, 2000);
     }
 }

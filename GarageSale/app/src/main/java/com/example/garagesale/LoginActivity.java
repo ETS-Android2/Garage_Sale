@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView mForgetPassword;
 
     private ProgressDialog mDialog;
-    public String adminStaticEmail = "falak.desai@yahoo.com";
+    public String adminStaticEmail = "admin@garagesale.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
