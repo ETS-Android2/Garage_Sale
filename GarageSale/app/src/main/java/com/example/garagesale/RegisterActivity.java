@@ -129,13 +129,13 @@ public class RegisterActivity extends AppCompatActivity {
                                             mDialog.cancel();
                                             startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
                                             finish();
-                                            Toast.makeText(RegisterActivity.this, "Registered Success", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
                                             mDialog.cancel();
-                                            Toast.makeText(RegisterActivity.this, "Fail to register user \n" + e, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Failed to register user \n" + e, Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                 } else {

@@ -91,7 +91,7 @@ public class AdminActivity extends AppCompatActivity {
                                 mProductList.add(products);
                             }
                             mTvProducts.setText("Total Products : " + mProductList.size());
-                            mTvTransactions.setText("Total TransactionS : " + mTransactionList.size());
+                            mTvTransactions.setText("Total Transactions : " + mTransactionList.size());
                         } else {
                             Toast.makeText(AdminActivity.this, "Error getting products", Toast.LENGTH_SHORT).show();
                         }

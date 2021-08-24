@@ -53,6 +53,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.annotation.Nonnull;
 
@@ -191,8 +192,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public boolean onMarkerClick(@NonNull Marker marker) {
-        for (int i = 0; i <= mProductList.size(); i++){
-            if (mProductList.get(i).getProductKey().equals(marker.getTag())){
+        for (int i = 0; i <= mProductList.size(); i++) {
+            if (mProductList.get(i).getProductKey().equals(marker.getTag())) {
                 Intent intent = new Intent(this, ProductDetailActivity.class);
                 intent.putExtra("Product", mProductList.get(i));
                 startActivity(intent);
@@ -212,22 +213,36 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onComplete(@NonNull @NotNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
 
-                            int index = 0;
-
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
                                 Product products = document.toObject(Product.class);
-                                mProductList.add(products);
-                                mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(mProductList.get(index).getProductLat(), mProductList.get(index).getProductLng())).title(mProductList.get(index).getProductName()));
 
-                                index++;
-
+                                if (currentUser == null) {
+                                    addListAndDrawMaker(products);
+                                } else if (!currentUser.getUid().equals(products.getProductOwnerUid())){
+                                    addListAndDrawMaker(products);
+                                }
                             }
                         } else {
                             Toast.makeText(getBaseContext(), "Getting error while fetching product", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+    }
+
+    private void addListAndDrawMaker(Product product){
+
+        //getProductDisplay()  is the Flag used in Product POJO class & in DB. If the value is TRUE it means
+        // that we will make it visible;  If the value is FALSE then we will not show it.
+        if (product.getProductDisplay()){
+            mProductList.add(product);
+            Objects.requireNonNull(mGoogleMap.addMarker(
+                    new MarkerOptions().position(
+                            new LatLng(
+                                    product.getProductLat(),
+                                    product.getProductLng()))))
+                    .setTag(product.getProductKey());
+        }
     }
 
     //Harsh: get initial & timelapse location requests every 5 seconds
