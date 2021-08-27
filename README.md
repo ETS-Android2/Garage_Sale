@@ -1,5 +1,11 @@
 # Garage Sale
 
+
+| Admin | Guest | Customer |
+|:-------------:|:-------------:|:-----:|
+|![](Admin.gif)|![](Guest.gif)|![](Customer.gif)|
+
+
 ______________________
 > <h4> Admin Email ID:  <ul>admin@garagesale.com</ul> </h4>
 > <h4> Admin Password:  <ul>admin@123</ul> </h4>
@@ -21,6 +27,7 @@ Garage Sale is an android application consisting of a User and Admin side. User 
  They can reserve an item listed in the garage sales as online trade. The idea is for Customers to be able to post Ads for Garage Sales Ideally.
  Admin has access to manage/monitor the items posted by Customers.
 
+
 <h4>Contributors:</h4>
 
 * Falak Desai
@@ -28,7 +35,3 @@ Garage Sale is an android application consisting of a User and Admin side. User 
 * Krina Patel
 * Krutarth Rangoonwala
 * Mehul Mangukiya
-
-<h4>Screenshots</h4>
-
-![alt text] (https://github.com/Phd-257/Garage_Sale/blob/main/Admin.gif)
