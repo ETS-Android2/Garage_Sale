@@ -62,6 +62,19 @@ import static androidx.activity.result.contract.ActivityResultContracts.*;
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnCameraMoveStartedListener {
 
+
+    //1. Check if Permissions of Location is provided.                      (requestPermissionLauncher)
+    //1.1 If provided, then check if GPS is on.   (GPS button in mobile)    (  checkGps()  )
+    //1.2  If GPS is not on, do nothing, built in dialogue will be created. (  checkGps()  )
+
+    //1.3 If GPS is on, then request new location.
+    //1.4 To receive that new location, create a Location Callback.         ( locationCallback )
+
+    //2. If Location permission not provided, then Request for Permission   (requestPermissionLauncher)
+    //2.1 If provided, GoTO: 1.1                                            (  checkGps()  )
+    //2.2 If not provided, do nothing. Functionality won't work.
+
+
     private FloatingActionButton mFabLocation;
 
     private GoogleMap mGoogleMap;
@@ -72,7 +85,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private final List<Product> mProductList = new ArrayList<>();
 
     //Harsh
-    // permission checking when user request
+    // permission checking when user request. Step 1 & 2
     private final ActivityResultLauncher<String[]> requestPermissionLauncher = registerForActivityResult(new RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
         @Override
         public void onActivityResult(Map<String, Boolean> result) {
@@ -104,7 +117,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private final String[] permissionsForLocation = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
 
     //Harsh
-    // getting updated location if user request by location request
+    // To receive updated location if user request by location request
     private final LocationCallback locationCallback = new LocationCallback() {
         @Override
         public void onLocationResult(@NonNull @Nonnull LocationResult locationResult) {
@@ -126,6 +139,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         //Harsh: getting data of user's last location if exists
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
         //Harsh: creating new location request
         createLocationRequest();
         //Harsh: Allow-Deny location permission popup
@@ -134,6 +148,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         //Harsh:
         mFabLocation = findViewById(R.id.fab_location);
         BottomNavigationView navView = findViewById(R.id.nav_view);
+
 
         //Harsh:
         checkLocation();
