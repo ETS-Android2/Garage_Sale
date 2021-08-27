@@ -30,3 +30,5 @@ Garage Sale is an android application consisting of a User and Admin side. User 
 * Mehul Mangukiya
 
 <h4>Screenshots</h4>
+
+![alt text] (https://github.com/Phd-257/Garage_Sale/blob/main/Admin.gif)
