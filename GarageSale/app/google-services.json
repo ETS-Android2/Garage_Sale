@@ -33,6 +33,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98102838028:android:fe9e6bdfe9ba668dd3ff29",
+        "android_client_info": {
+          "package_name": "com.yellowsparkle.garagesale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98102838028-putlt066fvsojpl1rh4h3a681f4alakf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv40FrxYTVsFOpOmwf19hfLZa68F-gpOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98102838028-putlt066fvsojpl1rh4h3a681f4alakf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

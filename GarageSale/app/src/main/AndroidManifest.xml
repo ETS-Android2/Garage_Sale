@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.garagesale">
+    package="com.yellowsparkle.garagesale">
 
     <application
         android:allowBackup="true"
@@ -10,46 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarageSale">
         <activity
-            android:name=".ProductDetailActivity"
+            android:name="com.yellowsparkle.garagesale.ProductDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".EditProductActivity"
+            android:name="com.yellowsparkle.garagesale.EditProductActivity"
             android:exported="true" />
         <activity
-            android:name=".TransactionsActivity"
+            android:name="com.yellowsparkle.garagesale.TransactionsActivity"
             android:exported="true" />
         <activity
-            android:name=".CustomersActivity"
+            android:name="com.yellowsparkle.garagesale.CustomersActivity"
             android:exported="true" />
         <activity
-            android:name=".AllProductActivity"
+            android:name="com.yellowsparkle.garagesale.AllProductActivity"
             android:exported="true" />
         <activity
-            android:name=".ManageProductActivity"
+            android:name="com.yellowsparkle.garagesale.ManageProductActivity"
             android:exported="true" />
         <activity
-            android:name=".AddProductActivity"
+            android:name="com.yellowsparkle.garagesale.AddProductActivity"
             android:exported="true" />
         <activity
-            android:name=".AdminProductsActivity"
+            android:name="com.yellowsparkle.garagesale.AdminProductsActivity"
             android:exported="true" />
         <activity
-            android:name=".AdminActivity"
+            android:name="com.yellowsparkle.garagesale.AdminActivity"
             android:exported="true" />
         <activity
-            android:name=".SettingActivity"
+            android:name="com.yellowsparkle.garagesale.SettingActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.yellowsparkle.garagesale.ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".HomeActivity"
+            android:name="com.yellowsparkle.garagesale.HomeActivity"
             android:label="@string/app_name" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ForgetPasswordActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.yellowsparkle.garagesale.RegisterActivity" />
+        <activity android:name="com.yellowsparkle.garagesale.ForgetPasswordActivity" />
+        <activity android:name="com.yellowsparkle.garagesale.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.yellowsparkle.garagesale.SplashActivity"
             android:theme="@style/Theme.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
