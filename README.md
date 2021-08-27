@@ -1,4 +1,4 @@
-# Garage_Sale
+# Garage Sale
 
 ______________________
 > <h4> Admin Email ID:  <ul>admin@garagesale.com</ul> </h4>
