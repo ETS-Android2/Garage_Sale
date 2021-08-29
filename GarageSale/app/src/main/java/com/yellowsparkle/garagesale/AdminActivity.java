@@ -57,7 +57,7 @@ public class AdminActivity extends AppCompatActivity {
                         break;
 
                     case R.id.navigation_customers:
-                        startActivity(new Intent(AdminActivity.this, CustomersActivity.class));
+                        startActivity(new Intent(AdminActivity.this, CustomersListActivity.class));
                         break;
 
                     case R.id.navigation_transactions:

@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CustomersActivity extends AppCompatActivity {
+public class CustomersListActivity extends AppCompatActivity {
 
     private RecyclerView mCustomersRecycler;
     private final List<UserDetail> mListOfUsers = new ArrayList<>();
-    private UsersListAdapter mUsersListAdapter;
+    private CustomersListAdapter mCustomersListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,11 @@ public class CustomersActivity extends AppCompatActivity {
                                 UserDetail userDetail = document.toObject(UserDetail.class);
                                 mListOfUsers.add(userDetail);
                             }
-                            mUsersListAdapter = new UsersListAdapter(mListOfUsers);
-                            mCustomersRecycler.setAdapter(mUsersListAdapter);
+                            mCustomersListAdapter = new CustomersListAdapter(mListOfUsers);
+                            mCustomersRecycler.setAdapter(mCustomersListAdapter);
 
                         } else {
-                            Toast.makeText(CustomersActivity.this, "Error getting users", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomersListActivity.this, "Error getting users", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

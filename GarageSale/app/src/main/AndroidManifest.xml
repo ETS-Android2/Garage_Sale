@@ -19,7 +19,7 @@
             android:name="com.yellowsparkle.garagesale.TransactionsActivity"
             android:exported="true" />
         <activity
-            android:name="com.yellowsparkle.garagesale.CustomersActivity"
+            android:name="com.yellowsparkle.garagesale.CustomersListActivity"
             android:exported="true" />
         <activity
             android:name="com.yellowsparkle.garagesale.AllProductActivity"

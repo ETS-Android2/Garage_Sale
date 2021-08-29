@@ -128,8 +128,8 @@ public class ProductDetailActivity extends AppCompatActivity {
                         mDialog.cancel();
                         return;
                     }
-                    if (10 > phone.length()){
-                        Toast.makeText(ProductDetailActivity.this, "Invalid phone number is empty", Toast.LENGTH_SHORT).show();
+                    if (phone.length() != 10){
+                        Toast.makeText(ProductDetailActivity.this, "Invalid. Please enter 10 digit number.", Toast.LENGTH_SHORT).show();
                         mDialog.cancel();
                         return;
                     }

@@ -26,7 +26,7 @@ import java.util.List;
 
 
 
-public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.MyUsersListViewHolder> {
+public class CustomersListAdapter extends RecyclerView.Adapter<CustomersListAdapter.MyUsersListViewHolder> {
 
     private final List<UserDetail> mUserList;
     private final List<Product> mProductAdded = new ArrayList<>();
@@ -34,7 +34,7 @@ public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.MyUs
 
     // 1st called
     // getting list from the constructor
-    public UsersListAdapter(List<UserDetail> userList) {
+    public CustomersListAdapter(List<UserDetail> userList) {
         mUserList = userList;
     }
 
@@ -42,7 +42,7 @@ public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.MyUs
     @NonNull
     @NotNull
     @Override
-    public UsersListAdapter.MyUsersListViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+    public CustomersListAdapter.MyUsersListViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_customers, parent, false);
         return new MyUsersListViewHolder(mView);
     }
@@ -50,7 +50,7 @@ public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.MyUs
     //5th called
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull @NotNull UsersListAdapter.MyUsersListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull @NotNull CustomersListAdapter.MyUsersListViewHolder holder, int position) {
         UserDetail userDetail = mUserList.get(position);
         holder.mTvUserName.setText(userDetail.getFirstName());
         holder.mTvUserNo.setText("No. :" + userDetail.getPhoneNumber());

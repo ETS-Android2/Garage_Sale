@@ -131,7 +131,7 @@ public class AddProductActivity extends AppCompatActivity {
                     mDialog.cancel();
                     return;
                 }
-                if (pPrice == 0.0) {
+                if (pPrice <= 0.0) {
                     Toast.makeText(AddProductActivity.this, "Invalid price", Toast.LENGTH_SHORT).show();
                     mDialog.cancel();
                     return;
