@@ -19,7 +19,7 @@ ______________________
 ______________________
 
 
-<h4>Garage Sale App PlayStore Link: </h4>
+<h4>Garage Sale App PlayStore Link: </h4> https://play.google.com/store/apps/details?id=com.yellowsparkle.garagesale
 
 <h4>About Garage Sale app</h4>
 Garage Sale is an android application consisting of a User and Admin side. User side has two options: Customer and Guest.
