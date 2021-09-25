@@ -5,20 +5,6 @@
 |:-------------:|:-------------:|:-----:|
 |![](Admin.gif)|![](Guest.gif)|![](Customer.gif)|
 
-
-______________________
-> <h4> Admin Email ID:  <ul>admin@garagesale.com</ul> </h4>
-> <h4> Admin Password:  <ul>admin@123</ul> </h4>
-______________________
-
-
-______________________
-> <h4> Test Customer Email ID: <ul>ab@ab.com</ul> </h4>
-> <h4> Test Customer Password: <ul>123456</ul> </h4>
-- <h4>Alternatively you can create an account by signing up in the app.</h4>
-______________________
-
-
 <h4>Garage Sale App PlayStore Link: </h4> https://play.google.com/store/apps/details?id=com.yellowsparkle.garagesale
 
 <h4>About Garage Sale app</h4>
